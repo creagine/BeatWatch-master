@@ -1,0 +1,37 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    signingConfigs {
+        releaseConfig {
+            storeFile file("../ludetis_keystore")
+            storePassword "byeneodatis"
+            keyAlias "ludetis.de"
+            keyPassword "byeneodatis"
+        }
+    }
+    defaultConfig {
+        applicationId "de.ludetis.android.myheartbeat"
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            debuggable true
+            signingConfig signingConfigs.releaseConfig
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    wearApp project(':wear')
+    compile 'androidx.appcompat:appcompat:1.0.0'
+    compile 'com.google.android.gms:play-services:12.0.1'
+    implementation 'com.android.support:multidex:1.0.3'
+}

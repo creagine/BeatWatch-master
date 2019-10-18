@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context=".MainActivity" tools:deviceIds="wear_round"
+    android:background="@drawable/background">
+
+    <TextView android:text="0" android:layout_width="wrap_content"
+        android:id="@+id/heartbeat"
+        android:layout_height="wrap_content"
+        android:textColor="#F8F8F8"
+        android:textSize="50sp"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginTop="30dp" />
+
+    <TextView
+        android:layout_width="172dp"
+        android:layout_height="wrap_content"
+        android:text="@string/alertText"
+        android:id="@+id/alertText"
+        android:layout_gravity="bottom|center_horizontal"
+        android:textSize="30sp"
+        android:layout_marginBottom="50dp"
+        android:textAlignment="center"
+        android:textColor="#c8000000"
+        android:gravity="center" />
+
+    <ProgressBar
+        android:id="@+id/progressBarToday"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="250dp"
+        android:layout_height="273dp"
+        android:layout_centerInParent="true"
+        android:indeterminate="false"
+        android:max="48"
+        android:progress="45"
+        android:progressDrawable="@drawable/progress_bar"
+        android:layout_gravity="center" />
+</FrameLayout>

@@ -1,0 +1,22 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <TextView android:text="0" android:layout_width="wrap_content"
+        android:id="@+id/heartbeat"
+        android:layout_height="wrap_content"
+        android:textColor="#24CEB8"
+        android:textSize="86sp"
+        android:layout_gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentRight="true"
+        android:layout_alignWithParentIfMissing="false"
+        android:paddingTop="116dp"
+        android:paddingRight="25dp"
+        android:textAlignment="textEnd" />
+
+</RelativeLayout>
